@@ -1,6 +1,7 @@
 import os
 import torch
 import platform
+import pandas as pd
 from model import ModelConfig, create_model
 from trainer import GenomicTransformerTrainer, TrainingConfig
 from genomic_dataloader import SimplePathogenDataset
@@ -107,8 +108,6 @@ def create_small_test_dataset(
         output_csv: Path to save the small test CSV
         sample_size: Number of samples to include
     """
-    import pandas as pd
-    
     # Read the original CSV
     df = pd.read_csv(input_csv)
     
