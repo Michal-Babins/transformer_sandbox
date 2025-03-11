@@ -136,7 +136,8 @@ class SimplePathogenDataset(Dataset):
         # Get label
         label = torch.tensor(self.species_to_idx[species], dtype=torch.long)
         
-        # Calculate basic assembly features
+        # Calculate basic assembly features - just for example
+        # Didn't check if these are correct or not
         total_length = sum(len(contig) for contig in contigs)
         n50 = 0
         cumulative = 0
